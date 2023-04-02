@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/quote-generator/static/css/main.cef41161.css",
+    "main.js": "/quote-generator/static/js/main.b20087a1.js",
+    "static/js/787.e43a185d.chunk.js": "/quote-generator/static/js/787.e43a185d.chunk.js",
+    "static/media/haley-carman-c4LpYfizLvw-unsplash.jpg": "/quote-generator/static/media/haley-carman-c4LpYfizLvw-unsplash.a195fa52ebe7d32238db.jpg",
+    "index.html": "/quote-generator/index.html",
+    "main.cef41161.css.map": "/quote-generator/static/css/main.cef41161.css.map",
+    "main.b20087a1.js.map": "/quote-generator/static/js/main.b20087a1.js.map",
+    "787.e43a185d.chunk.js.map": "/quote-generator/static/js/787.e43a185d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cef41161.css",
+    "static/js/main.b20087a1.js"
+  ]
+}
