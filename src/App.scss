@@ -1,0 +1,169 @@
+
+// Colors
+$primary: #5372EF;
+$secondary: #282c34;
+$white: #fff;
+$gray-1: #61646A;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+.App {
+  text-align: center;
+  font-family: 'Inconsolata';
+
+  .App-content {
+    // background-color: $primary;
+    background: url(./icons/haley-carman-c4LpYfizLvw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+
+    .quote-box {
+      width: 80vw;
+      max-width: 650px;
+      padding: 2rem;
+      background-color: $white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      color: $secondary;
+      border-radius: 1rem;
+
+
+      svg {
+        width: 2.5rem;
+        height: 1.8rem;
+      }
+
+      &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(2.1875rem, 2.0089rem + 0.8929vw, 2.8125rem);
+        line-height: 48px;
+        letter-spacing: -0.06em;
+      }
+
+      &__text {
+        margin-top: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(1.375rem, 1.3214rem + 0.2679vw, 1.5625rem);
+        line-height: 41px;
+        letter-spacing: 0.01em;
+        color: $gray-1;
+      }
+      
+      &__author {
+        text-align: right;
+        font-size: clamp(1.375rem, 1.3214rem + 0.2679vw, 1.5625rem);
+        line-height: 41px;
+        letter-spacing: -0.01em;
+        margin-block: 1.5rem;
+        color: $gray-1;
+      }
+
+      
+      .quote-btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #bcc5d79e;
+        padding: 1rem 0 0;
+
+        & > div {
+          display: flex;
+          gap: 1rem;
+        }
+
+        &__new {
+          display: block;
+          padding: 1rem 3rem;
+          border-radius: 1rem;
+          font: inherit;
+          border: none;
+          outline: none;
+          background-color: $primary;
+          color: $white;
+          font-weight: 700;
+          cursor: pointer;
+
+          &:active {
+            transform: scale(1.2);
+          }
+        }
+
+        &__btn {
+          border: 1px solid $primary;
+          width: 40px;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          color: $primary;
+          cursor: pointer;
+          &:hover, &:active {
+            background-color: $secondary;
+            border: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#snackbar {
+  visibility: hidden;
+  color: #fff;
+  background-color: #333;
+  min-width: 250px;
+  margin-left: -125px;
+  border-radius: 2px;
+  padding: 16px;
+  text-align: center;
+  left: 50%;
+  bottom: 30px;
+  z-index: 1;
+  position: fixed;
+
+  &.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+}
+
+
+/* Animations for fading in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+
+
